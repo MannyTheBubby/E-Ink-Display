@@ -10,7 +10,7 @@
 # -----------------------------------------------------------------------------
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documnetation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
+# in the Softwarepd2in9bce without restriction, including without limitation the rights
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to  whom the Software is
 # furished to do so, subject to the following conditions:
@@ -29,7 +29,7 @@
 
 
 import logging
-import epdconfig
+import workspace_epd.epdconfig as epdconfig
 
 # Display resolution
 EPD_WIDTH       = 128

@@ -1,5 +1,8 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
+from workspace_epd import qr_generate
+qr_generate.qr_generate()
+
 import sys
 import os
 picdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'pic')
@@ -8,26 +11,27 @@ if os.path.exists(libdir):
     sys.path.append(libdir)
 
 import logging
-import epd2in9bc
+from workspace_epd import epd2in9bc
 import time
-from PIL import Image,ImageDraw,ImageFont
+from PIL import Image, ImageDraw, ImageFont
 import traceback
 import time
 
 logging.basicConfig(level=logging.DEBUG)
 
 try:
-    logging.info("epd2in9bc Demo")
 
+    logging.info("epd2in9bc Demo")
     epd = epd2in9bc.EPD()
+
     logging.info("init and Clear")
+
     epd.init()
     epd.Clear()
-    img = Image.open("qr.png").convert("1")
-    time.sleep(1)
 
+    img = Image.open("workspace_epd/image.png").convert("1")
 
-    # Drawing on the image
+    # Get the width and height of the display
 
 
     print(f"The height is {epd.height}")
