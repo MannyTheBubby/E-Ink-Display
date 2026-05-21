@@ -1,7 +1,9 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 from workspace_epd import qr_generate
+import os
 qr_generate.qr_generate()
+
 
 import sys
 import os
@@ -19,6 +21,9 @@ import time
 
 logging.basicConfig(level=logging.DEBUG)
 
+script_dir = os.path.dirname(os.path.realpath(__file__))
+image_path = os.path.join(script_dir, "workspace_epd", "image.png")
+
 try:
 
     logging.info("epd2in9bc Demo")
@@ -29,7 +34,7 @@ try:
     epd.init()
     epd.Clear()
 
-    img = Image.open("workspace_epd/image.png").convert("1")
+    img = Image.open(image_path).convert("1")
 
     # Get the width and height of the display
 
