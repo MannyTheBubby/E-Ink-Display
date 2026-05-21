@@ -3,5 +3,6 @@ gpio==1.0.1
 gpiozero==2.0.1
 Jetson.GPIO==2.1.12
 pillow==12.2.0
+qrcode==8.2
 setuptools==82.0.1
 spidev==3.8
