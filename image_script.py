@@ -33,10 +33,6 @@ try:
     print(f"The height is {epd.height}")
     print(f"The width is {epd.width}")
 
-    font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
-    font30 = ImageFont.truetype(os.path.join(picdir, "Font.ttc"), 30)
-    font18 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 18)
-
     # Drawing the image
     img = img.resize((epd.height, epd.width))
 
